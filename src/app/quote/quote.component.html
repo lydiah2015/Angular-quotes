@@ -1,6 +1,7 @@
+<div class="jumbotron">
 <h1>QUOTES</h1>
 <P>How you feel,written down for you.</P>
-<hr>
+</div>
 <app-quote-form (emitQuote)="addQuote($event)"></app-quote-form>
 <ul>
   <div  *ngFor='let quote of quotes; let i=index'>
@@ -8,7 +9,7 @@
    <app-quote-details [quote]='quote'></app-quote-details>
      <button (click)="upVote(i)">UPVOTE</button>
      <button (click)="downVote(i)">DOWNVOTE</button>
-
+     <button (click)="deleteQuote(i)">DELETE</button>
 
   </div>
 </ul>
