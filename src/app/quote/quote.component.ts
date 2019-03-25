@@ -13,6 +13,7 @@ export class QuoteComponent implements OnInit {
     new Quote('Promises are cheap','Lydia Makini','Elle Makini'),
   ]
   constructor() { }
+  
 
   ngOnInit() {
   }
@@ -30,5 +31,9 @@ export class QuoteComponent implements OnInit {
    }
    deleteQuote(i){
      this.quotes.splice(i,1)
+   }
+   showDetails(i) {
+     this.showDetails[i] != false;
+
    }
 }
