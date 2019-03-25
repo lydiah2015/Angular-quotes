@@ -1,6 +1,8 @@
 <form (ngSubmit)="submitQuote()">
-  <label>Publisher:<input type="text" [(ngModel)]="publisher" placehoder = "Publisher" name ="Publisher" required></label>
-  <label>Quote:<input type="text" [(ngModel)]="quote" placehoder = "Quote" name ="Quote" required></label>
-  <label>Author:<input type="text" [(ngModel)]="author" placehoder = "Author" name ="Author" required></label>
+  <ul>
+ <ol><label>Publisher:<input type="text" [(ngModel)]="publisher" placehoder = "Publisher" name ="Publisher" required></label></ol>
+ <ol><label>Quote:<input type="text" [(ngModel)]="quote" placehoder = "Quote" name ="Quote" required></label></ol>
+ <ol><label>Author:<input type="text" [(ngModel)]="author" placehoder = "Author" name ="Author" required></label></ol>
   <button type="submit" class = "btn btn-primary">SUBMIT</button>
+</ul>
 </form>
