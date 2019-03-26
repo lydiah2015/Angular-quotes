@@ -6,7 +6,7 @@
 .details {
   width: 500px;
   height: 50%;
-  background-image: linear-gradient(to right, #fab1a0 , #74b9ff);
+  background-image: linear-gradient(to right, #fab1a0, #74b9ff);
   margin-bottom: 20px;
   border-radius: 20px;
 }

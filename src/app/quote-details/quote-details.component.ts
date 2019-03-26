@@ -13,7 +13,7 @@ export class QuoteDetailsComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
-  toggleCollapsed(i) {
+  toggleCollapsed() {
     this.showDetails = !this.showDetails;
   }
 }
