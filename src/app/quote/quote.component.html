@@ -1,17 +1,22 @@
-<div class="jumbotron">
-<h1>QUOTES</h1>
-<P>How you feel,written down for you.</P>
-</div>
-<app-quote-form (emitQuote)="addQuote($event)"></app-quote-form>
-<ul>
-  <div  *ngFor='let quote of quotes; let i=index'>
-   <li>{{quote.quote}}</li>
-   <button (click)=showDetails(i)>DETAILS</button>
-   <app-quote-details [quote]='quote'></app-quote-details>
-     <button (click)="upVote(i)">UPVOTE</button>
-     <button (click)="downVote(i)">DOWNVOTE</button>
-     <button (click)="deleteQuote(i)">DELETE</button>
-
+<div class="container">
+  <div class="jumbotron">
+    <h1>QUOTES</h1>
+    <P>How you feel,written down for you.</P>
   </div>
-</ul>
+  <div class="row">
+    <app-quote-form (emitQuote)="addQuote($event)" class="col-md-12"></app-quote-form>
+    <ul>
+      <div *ngFor='let quote of quotes; let i=index' class="details d-flex flex-column align-items-center">
+        <p class="mb-5 text-center">{{quote.quote}}</p>
 
+        <app-quote-details [quote]='quote' class="mb-3"></app-quote-details>
+        <div class="buttons d-flex justify-content-center">
+          <button (click)="upVote(i)" class="btn btn-primary mr-2">UPVOTE</button>
+          <button (click)="downVote(i)" class="btn btn-primary mr-2">DOWNVOTE</button>
+          <button (click)="deleteQuote(i)" class="btn btn-danger mr-2">DELETE</button>
+        </div>
+
+      </div>
+    </ul>
+  </div>
+</div>
